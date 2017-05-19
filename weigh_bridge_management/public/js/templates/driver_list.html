@@ -1,0 +1,42 @@
+<div class="clearfix"></div>
+<div class="row">
+{% if (driver_list.length == 0) { %}
+    <div class="col-xs-12">
+        <h2 class="text-muted text-center">Drivers have not been linked with this Vehicle.</h2>
+    </div>
+{% } %}
+
+{% for (var i=0, l=driver_list.length; i<l; i++) { %}
+    <div class="col-md-3 col-xs-6">
+        <div class="thumbnail">
+            <a href="#Form/Driver/{%= encodeURIComponent(driver_list[i].wb_driver_licence)%}">
+                <div style="text-align: center; max-height: 180px; margin-left: 2px; overflow:hidden;">
+                    {% if(driver_list[i].wb_driver_photo != null) { %}        
+                        <img src="{%= encodeURIComponent(driver_list[i].wb_driver_photo)%}" class="img-responsive img-thumbnail center-block" style="height:180px;" />
+                    {% } else { %}
+                        <div class="center-block" style="height:180px; background-color: #eee;">
+                            <span class="octicon octicon-circle-slash" style="width: 100%;"></span>
+                        </div> 
+                    {% } %}
+                </div>
+            </a>
+            <div class="caption">
+                <a href="#Form/Driver/{%= encodeURIComponent(driver_list[i].wb_driver_licence)%}">
+                    <div style="font-size: 13px; font-weight: bold;">{{ driver_list[i].wb_driver_fn }} {{ driver_list[i].wb_driver_ln }}</div>
+                </a>
+                <div style="font-size: 11px;">Licence No: {{ driver_list[i].wb_driver_licence }}</div>
+            </div>        
+        </div>
+    </div>
+{% } %}
+</div>
+<style type="text/css">
+    .center-block span {
+        margin-top: 75%;
+    }
+    @media screen and (min-width: 320px) {
+        .center-block span {
+            margin-top: 45%;
+        }
+    }
+</style>

@@ -1,0 +1,29 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-06-27 13:03:27.587527", 
+  "name": "First Weighing", 
+  "style": "Info", 
+  "workflow_state_name": "First Weighing"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-06-27 13:05:42.123087", 
+  "name": "Second Weighing", 
+  "style": "Warning", 
+  "workflow_state_name": "Second Weighing"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-06-27 14:23:29.469233", 
+  "name": "Weighing Complete", 
+  "style": "Success", 
+  "workflow_state_name": "Weighing Complete"
+ }
+]

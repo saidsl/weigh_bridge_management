@@ -1,0 +1,5 @@
+{
+	"js/wbm.min.js": [
+		"public/js/templates/driver_list.html"
+	]
+}

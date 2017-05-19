@@ -1,0 +1,52 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Weighbridge Ticket", 
+  "is_active": 1, 
+  "modified": "2016-06-28 21:21:15.775971", 
+  "name": "Weighbridge Weighing", 
+  "states": [
+   {
+    "allow_edit": "Weighbridge User", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "First Weighing", 
+    "update_field": "", 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Weighbridge User", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Second Weighing", 
+    "update_field": "", 
+    "update_value": ""
+   }, 
+   {
+    "allow_edit": "Weighbridge User", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Weighing Complete", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Second Weighing", 
+    "allowed": "Weighbridge User", 
+    "next_state": "Second Weighing", 
+    "state": "First Weighing"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Weighbridge User", 
+    "next_state": "Weighing Complete", 
+    "state": "Second Weighing"
+   }
+  ], 
+  "workflow_name": "Weighbridge Weighing", 
+  "workflow_state_field": "workflow_state"
+ }
+]

@@ -1,0 +1,11 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Purchase Invoice", 
+  "modified": "2016-07-26 14:44:16.394256", 
+  "name": "Purchase Invoice-Client", 
+  "script": "frappe.ui.form.on(\"Purchase Invoice\", \"onload\", function(frm) {\n\tflds = cur_frm.get_field('items').grid.editable_fields;\n\t//alert(flds[0].columns);\n\tflds[1].columns = 1;\n\tflds[2].columns = 2;\n\tflds[3].columns = 2;\n\tflds.splice(1, 0, {fieldname: 'item_name', columns: 2});\n});", 
+  "script_type": "Client"
+ }
+]

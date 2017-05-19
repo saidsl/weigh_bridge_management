@@ -1,0 +1,266 @@
+{
+ "allow_copy": 0, 
+ "allow_import": 1, 
+ "allow_rename": 0, 
+ "autoname": "WBT-.############", 
+ "beta": 0, 
+ "creation": "2016-06-23 19:17:26.311150", 
+ "custom": 0, 
+ "docstatus": 0, 
+ "doctype": "DocType", 
+ "document_type": "Document", 
+ "editable_grid": 0, 
+ "fields": [
+  {
+   "fieldname": "party_type", 
+   "fieldtype": "Select", 
+   "label": "Party Type", 
+   "options": "\nCustomer\nSupplier", 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "cb_00", 
+   "fieldtype": "Column Break"
+  }, 
+  {
+   "depends_on": "eval:doc.party_type==='Customer'", 
+   "fieldname": "customer", 
+   "fieldtype": "Link", 
+   "label": "Customer", 
+   "options": "Customer"
+  }, 
+  {
+   "depends_on": "eval:doc.party_type==='Supplier'", 
+   "fieldname": "supplier", 
+   "fieldtype": "Link", 
+   "label": "Supplier", 
+   "options": "Supplier"
+  }, 
+  {
+   "fieldname": "wbt_load_direction", 
+   "fieldtype": "Select", 
+   "label": "Load Direction", 
+   "options": "\nIncoming\nOutgoing", 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "section_break_3", 
+   "fieldtype": "Section Break"
+  }, 
+  {
+   "bold": 1, 
+   "fieldname": "wbt_vehicle", 
+   "fieldtype": "Link", 
+   "in_list_view": 1, 
+   "label": "Vehicle", 
+   "options": "Vehicle", 
+   "reqd": 1
+  }, 
+  {
+   "allow_on_submit": 1, 
+   "fieldname": "wbt_vehicle_tare_weight", 
+   "fieldtype": "Read Only", 
+   "label": "Recorded Tare Weight", 
+   "options": "wbt_vehicle.wb_vehicle_tare_weight"
+  }, 
+  {
+   "fieldname": "wbt_vehicle_driver_col_break", 
+   "fieldtype": "Column Break"
+  }, 
+  {
+   "fieldname": "wbt_driver", 
+   "fieldtype": "Link", 
+   "label": "Driver", 
+   "options": "Driver", 
+   "reqd": 1
+  }, 
+  {
+   "fieldname": "driver_name", 
+   "fieldtype": "Data", 
+   "label": "Driver Name", 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "wbt_weighing_details_section_break", 
+   "fieldtype": "Section Break", 
+   "label": "Weighing Details"
+  }, 
+  {
+   "fieldname": "wbt_first_weighing_heading", 
+   "fieldtype": "Heading", 
+   "label": "First Weighing"
+  }, 
+  {
+   "bold": 1, 
+   "fieldname": "wbt_time_in", 
+   "fieldtype": "Time", 
+   "in_list_view": 1, 
+   "label": "Time In", 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "wbt_first_weighing", 
+   "fieldtype": "Float", 
+   "in_list_view": 1, 
+   "label": "First Weighing", 
+   "precision": "2"
+  }, 
+  {
+   "default": "Tons", 
+   "fieldname": "wbt_first_weigh_uom", 
+   "fieldtype": "Link", 
+   "label": "UOM", 
+   "options": "UOM"
+  }, 
+  {
+   "fieldname": "wbt_weighing_col_break", 
+   "fieldtype": "Column Break"
+  }, 
+  {
+   "fieldname": "wbt_second_weighing_heading", 
+   "fieldtype": "Heading", 
+   "label": "Second Weighing"
+  }, 
+  {
+   "allow_on_submit": 1, 
+   "bold": 1, 
+   "fieldname": "wbt_time_out", 
+   "fieldtype": "Time", 
+   "in_list_view": 1, 
+   "label": "Time Out"
+  }, 
+  {
+   "allow_on_submit": 1, 
+   "fieldname": "wbt_second_weighing", 
+   "fieldtype": "Float", 
+   "in_list_view": 1, 
+   "label": "Second Weighing", 
+   "precision": "2"
+  }, 
+  {
+   "allow_on_submit": 1, 
+   "default": "Tons", 
+   "fieldname": "wbt_second_weigh_uom", 
+   "fieldtype": "Link", 
+   "label": "UOM", 
+   "options": "UOM"
+  }, 
+  {
+   "fieldname": "wbt_weighing_extra", 
+   "fieldtype": "Section Break"
+  }, 
+  {
+   "allow_on_submit": 1, 
+   "fieldname": "wbt_net_weight", 
+   "fieldtype": "Float", 
+   "label": "Net Weight", 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "cb_000", 
+   "fieldtype": "Column Break"
+  }, 
+  {
+   "fieldname": "wbt_weighing_section_break", 
+   "fieldtype": "Section Break"
+  }, 
+  {
+   "fieldname": "amended_from", 
+   "fieldtype": "Link", 
+   "label": "Amended From", 
+   "no_copy": 1, 
+   "options": "Weighbridge Ticket", 
+   "print_hide": 1, 
+   "read_only": 1
+  }, 
+  {
+   "fieldname": "sb_items", 
+   "fieldtype": "Section Break", 
+   "label": "Items"
+  }, 
+  {
+   "fieldname": "items", 
+   "fieldtype": "Table", 
+   "options": "Weighbridge Ticket Item"
+  }, 
+  {
+   "collapsible": 1, 
+   "collapsible_depends_on": "True", 
+   "fieldname": "sb_info", 
+   "fieldtype": "Section Break", 
+   "label": "More Information"
+  }, 
+  {
+   "fieldname": "company", 
+   "fieldtype": "Link", 
+   "in_filter": 1, 
+   "label": "Company", 
+   "options": "Company", 
+   "print_hide": 1
+  }, 
+  {
+   "fieldname": "company_currency", 
+   "fieldtype": "Link", 
+   "label": "Company Currency", 
+   "options": "Currency"
+  }, 
+  {
+   "fieldname": "cb_info_1", 
+   "fieldtype": "Column Break"
+  }, 
+  {
+   "depends_on": "eval:doc.party_type==\"Customer\"", 
+   "fieldname": "selling_price_list", 
+   "fieldtype": "Link", 
+   "label": "Selling Price List", 
+   "options": "Price List", 
+   "print_hide": 1
+  }, 
+  {
+   "depends_on": "eval:doc.party_type==\"Supplier\"", 
+   "fieldname": "buying_price_list", 
+   "fieldtype": "Link", 
+   "label": "Buying Price List", 
+   "options": "Price List", 
+   "print_hide": 1
+  }
+ ], 
+ "hide_heading": 0, 
+ "hide_toolbar": 0, 
+ "icon": "icon-balance-scale", 
+ "idx": 0, 
+ "image_view": 0, 
+ "in_create": 0, 
+ "in_dialog": 0, 
+ "is_submittable": 1, 
+ "issingle": 0, 
+ "istable": 0, 
+ "max_attachments": 0, 
+ "modified": "2016-09-19 15:50:34.655667", 
+ "modified_by": "Administrator", 
+ "module": "Andesit Karang Anyar", 
+ "name": "Weighbridge Ticket", 
+ "name_case": "UPPER CASE", 
+ "owner": "Administrator", 
+ "permissions": [
+  {
+   "create": 1, 
+   "delete": 1, 
+   "email": 1, 
+   "export": 1, 
+   "print": 1, 
+   "read": 1, 
+   "report": 1, 
+   "role": "Weighbridge User", 
+   "share": 1, 
+   "submit": 1, 
+   "write": 1
+  }
+ ], 
+ "quick_entry": 0, 
+ "read_only": 0, 
+ "read_only_onload": 0, 
+ "sort_field": "modified", 
+ "sort_order": "DESC", 
+ "track_seen": 0
+}
