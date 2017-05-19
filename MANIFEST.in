@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include andesit_karang_anyar *.css
-recursive-include andesit_karang_anyar *.csv
-recursive-include andesit_karang_anyar *.html
-recursive-include andesit_karang_anyar *.ico
-recursive-include andesit_karang_anyar *.js
-recursive-include andesit_karang_anyar *.json
-recursive-include andesit_karang_anyar *.md
-recursive-include andesit_karang_anyar *.png
-recursive-include andesit_karang_anyar *.py
-recursive-include andesit_karang_anyar *.svg
-recursive-include andesit_karang_anyar *.txt
-recursive-exclude andesit_karang_anyar *.pyc
+recursive-include weigh_bridge_management *.css
+recursive-include weigh_bridge_management *.csv
+recursive-include weigh_bridge_management *.html
+recursive-include weigh_bridge_management *.ico
+recursive-include weigh_bridge_management *.js
+recursive-include weigh_bridge_management *.json
+recursive-include weigh_bridge_management *.md
+recursive-include weigh_bridge_management *.png
+recursive-include weigh_bridge_management *.py
+recursive-include weigh_bridge_management *.svg
+recursive-include weigh_bridge_management *.txt
+recursive-exclude weigh_bridge_management *.pyc
