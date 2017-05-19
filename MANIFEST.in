@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include andesit_karang_anyar *.css
+recursive-include andesit_karang_anyar *.csv
+recursive-include andesit_karang_anyar *.html
+recursive-include andesit_karang_anyar *.ico
+recursive-include andesit_karang_anyar *.js
+recursive-include andesit_karang_anyar *.json
+recursive-include andesit_karang_anyar *.md
+recursive-include andesit_karang_anyar *.png
+recursive-include andesit_karang_anyar *.py
+recursive-include andesit_karang_anyar *.svg
+recursive-include andesit_karang_anyar *.txt
+recursive-exclude andesit_karang_anyar *.pyc
