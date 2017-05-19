@@ -1,6 +1,6 @@
 ## Andesit Karang Anyar
 
-ERPNext customization for Andesit Karang Anyar
+ERPNext Weigh Bridge Management App
 
 #### License
 
