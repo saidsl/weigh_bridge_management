@@ -13,7 +13,7 @@ with open('weigh_bridge_management/__init__.py', 'rb') as f:
 requirements = parse_requirements("requirements.txt", session="")
 
 setup(
-	name='Weigh Bridge Management',
+	name='WeighBridge',
 	version=version,
 	description='ERPNext Weigh Bridge Management App',
 	author='MN Technique',
